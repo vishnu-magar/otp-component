@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import TodoData from "../types/TodoItem";
+import { colors } from "../theme/colors";
 
 type Props = {
     todo: TodoData;
@@ -9,7 +10,7 @@ type Props = {
 const TodoItem = ({todo,onDelete,onUpdate}:Props) => {
     return (
         <View style={styles.container}>
-            <Text>{todo.text}</Text>
+            <Text style={styles.todoText}>{todo.text}</Text>
             <View style={styles.buttonContainer}>
                 <TouchableOpacity onPress={()=>onUpdate(todo)} style={styles.updateButton}>
                     <Text style={styles.textButton}>Update</Text>
@@ -25,32 +26,35 @@ const TodoItem = ({todo,onDelete,onUpdate}:Props) => {
 const styles = StyleSheet.create({
     container:{
         padding:12,
-        backgroundColor:'#d6e2d6',
+        backgroundColor:colors.background,
         marginVertical:8,
         marginHorizontal:16,
-        borderRadius:6,
-        elevation:1,
+        borderRadius:8,
+        elevation:2,
     },
     buttonContainer:{
         marginTop:8,
         flexDirection:'row',
         justifyContent:'flex-end',
     },
+    todoText:{
+        color:colors.text
+    },
     updateButton:{
-        backgroundColor:'#0044ee',
+        backgroundColor:colors.primary,
         paddingVertical:4,
         paddingHorizontal:6,
         borderRadius:4,
     },
     deleteButton:{
         marginStart:12,
-        backgroundColor:'#ba1f11',
+        backgroundColor:colors.secondary,
         paddingVertical:4,
         paddingHorizontal:6,
         borderRadius:4,
     },
     textButton:{
-        color:'#ffffff'
+        color:colors.white,
     }
 });
 

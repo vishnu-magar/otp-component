@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import TodoData from "../types/TodoItem";
+import { colors } from "../theme/colors";
 
 type Props = {
     addTodo: (text: string) => void;
@@ -53,13 +54,13 @@ const styles = StyleSheet.create({
     },
     addButton: {
         padding: 10,
-        backgroundColor: '#3baa31',
+        backgroundColor: colors.primary,
         marginStart: 12,
         borderRadius: 8,
         justifyContent: 'center'
     },
     buttonText: {
-        color: '#ffffff'
+        color: colors.white,
     }
 });
 
