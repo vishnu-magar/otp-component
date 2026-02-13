@@ -13,10 +13,9 @@ import {
 } from 'react-native-safe-area-context';
 import SearchInput from './src/SearchInput';
 import SearchInputComponent from './src/SearchInputComponent';
-import FlatlistScreen from './src/FlatlistDemo';
-import FlatlistSample from './src/FlatlistSample';
-import FinalFlatlist from './src/FinalFlatlist';
 import TodoScreen from './src/screens/TodoScreen';
+import OtpInputComponent from './src/screens/OtpInputComponent';
+import OtpScreen from './src/screens/OtpScreen';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,7 +23,7 @@ function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <TodoScreen/>
+      <OtpScreen/>
     </SafeAreaProvider>
   );
 }
