@@ -11,10 +11,6 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import SearchInput from './src/SearchInput';
-import SearchInputComponent from './src/SearchInputComponent';
-import TodoScreen from './src/screens/TodoScreen';
-import OtpInputComponent from './src/screens/OtpInputComponent';
 import OtpScreen from './src/screens/OtpScreen';
 
 function App() {
